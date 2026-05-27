@@ -1,7 +1,7 @@
 # BUIzz
 
 BUIzz is a browser testing framework designed to find policy enforcement bugs by simulating
-BUI (Browser User Interface)-level user interactions at the OS level
+BUI (Browser User Interface)-level user interactions at the OS level.
 
 ![BUIZZ Overview](Figure/Figure-overview.png)
 
