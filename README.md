@@ -1,6 +1,7 @@
-# BUIzz - Browser Userinterface Fuzzer
+# BUIzz
 
-BUIzz is the first framework that finds header security enforcement bugs by simulating realistic user interactions at the OS level.
+BUIzz is a browser testing framework designed to find policy enforcement bugs by simulating
+BUI (Browser User Interface)-level user interactions at the OS level
 
 ![BUIZZ Overview](Figure/Figure-overview.png)
 
