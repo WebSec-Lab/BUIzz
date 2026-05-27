@@ -1,6 +1,6 @@
-# BUIZZ - Browser Userinterface Fuzzer
+# BUIzz - Browser Userinterface Fuzzer
 
-BUIZZ is the first framework that finds header security enforcement bugs by simulating realistic user interactions at the OS level.
+BUIzz is the first framework that finds header security enforcement bugs by simulating realistic user interactions at the OS level.
 
 ![BUIZZ Overview](Figure/Figure-overview.png)
 
