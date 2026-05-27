@@ -1,0 +1,14 @@
+{
+  "browser": "brave",
+  "corpus": "https://attacker.test/s7/interactive?browser_name=brave&scenario_id=5_DEPTH1.json&bf=1&corpus=https%3A%2F%2Fattacker.test%2Fs7%2Finteractive",
+  "useraction": [
+    {
+      "type": "click",
+      "interaction": {
+        "title": "Middle click",
+        "num": "middle"
+      },
+      "tag": "#a1"
+    }
+  ]
+}

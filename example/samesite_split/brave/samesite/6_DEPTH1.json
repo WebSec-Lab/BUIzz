@@ -1,0 +1,14 @@
+{
+  "browser": "brave",
+  "corpus": "https://adition.com/s8/interactive/index.html?browser_name=brave&scenario_id=6_DEPTH1.json&bf=1&corpus=https%3A%2F%2Fadition.com%2Fs8%2Finteractive%2Findex.html",
+  "useraction": [
+    {
+      "type": "click",
+      "interaction": {
+        "title": "Middle click",
+        "num": "middle"
+      },
+      "tag": "#a1"
+    }
+  ]
+}

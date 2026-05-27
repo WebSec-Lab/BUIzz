@@ -1,0 +1,1 @@
+fetch("http://127.0.0.1:5021/report/report?leak=script")

@@ -1,0 +1,14 @@
+{
+  "browser": "brave",
+  "corpus": "https://attacker.com/render/sep_134?csp=script-src%20%27nonce-123%27%20%27unsafe-eval%27%3B%20connect-src%20%27none%27%3B&browser_name=brave&scenario_id=2486_DEPTH1.json&bf=1&corpus=https%3A%2F%2Fattacker.com%2Frender%2Fsep_134%3Fcsp%3Dscript-src%2520%2527nonce-123%2527%2520%2527unsafe-eval%2527%253B%2520connect-src%2520%2527none%2527%253B",
+  "useraction": [
+    {
+      "type": "mouse",
+      "tag": "#a1",
+      "interaction": {
+        "title": "Open link in new window",
+        "num": "3"
+      }
+    }
+  ]
+}

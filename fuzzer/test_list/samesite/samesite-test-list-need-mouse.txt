@@ -1,0 +1,25 @@
+# Scenario 0
+https://leak.test/s0/interactive/index.php
+https://leak.test/s0/interactive/index.html
+
+
+# Scenario 1
+https://attacker.test/s1/interactive/index.html
+
+# Scenario 2
+https://leak.test/s2/interactive/index.html
+
+# Scenario 3
+https://adition.com/s3/interactive/index.html
+
+# Scenario 4
+https://leak.test/s4/interactive/index.html
+
+# Scenario 7
+https://attacker.test/s7/interactive/index.html
+
+# Scenario 8
+https://adition.com/s8/interactive/index.html
+
+# USERINTERACTION TAG
+TAG - #a1 - drag_and_drop

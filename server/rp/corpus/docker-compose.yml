@@ -1,0 +1,52 @@
+version: '3'
+services:
+  # reverse proxy
+  nginx:
+    image: nginx:stable
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certs:/certs
+    depends_on:
+      - site1
+      - site2
+      - site3
+
+  site1:
+    build: ./site1
+    container_name: site1
+    volumes:
+      - ./site1:/var/www/html
+
+  site2:
+    build: ./site2
+    container_name: site2
+    volumes:
+      - ./site2:/var/www/html
+
+  site3:
+    build: ./site3
+    container_name: site3
+    volumes:
+      - ./site3:/var/www/html
+
+
+# change C:\Windows\System32\drivers\etc\hosts
+#127.0.0.1 attacker.test
+#127.0.0.1 adition.com
+#127.0.0.1 leak.test
+
+# 192.168.0.141 leak.test
+# 192.168.0.141 adition.com
+# 192.168.0.141 attacker.test
+
+
+## 
+# https://attacker.test/
+# https://adition.com/
+# https://leak.test/
+
+
+# docker compose up -d

@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  flask:
+    build:
+      context: ./backend
+    container_name: rp_flask
+    expose:
+      - "5000"
+    networks:
+      - rpnet
+
+  nginx:
+    image: nginx
+    container_name: rp_nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - flask
+    networks:
+      - rpnet
+
+networks:
+  rpnet:
+    driver: bridge
+    
+# change C:\Windows\System32\drivers\etc\hosts
+#127.0.0.1 victim.com
+#127.0.0.1 attacker.com

@@ -1,0 +1,7 @@
+<script>
+    if(window.opener){
+        fetch("/report/report/?leak=opener_finded")
+    }else{
+        fetch("/report/report/?leak=opener_not_finded")
+    }
+</script>

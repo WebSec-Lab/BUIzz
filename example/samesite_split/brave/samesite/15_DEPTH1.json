@@ -1,0 +1,14 @@
+{
+  "browser": "brave",
+  "corpus": "https://leak.test/s2/interactive/index.html?browser_name=brave&scenario_id=15_DEPTH1.json&bf=1&corpus=https%3A%2F%2Fleak.test%2Fs2%2Finteractive%2Findex.html",
+  "useraction": [
+    {
+      "type": "mouse",
+      "interaction": {
+        "title": "Open link in new tab",
+        "num": "1"
+      },
+      "tag": "#a1"
+    }
+  ]
+}

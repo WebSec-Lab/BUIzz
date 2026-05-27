@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>allow-storage-access-by-user-activation</title>
+</head>
+<body>
+<script>
+    document.requestStorageAccess()
+        .then(() => fetch("http://10.20.23.182:5021/report/report?leak=storage-access-granted"))
+        .catch(e => fetch("http://10.20.23.182:5021/report/report?leak=storage-access-denied&err=" + encodeURIComponent(e)))
+</script>
+</body>
+</html>

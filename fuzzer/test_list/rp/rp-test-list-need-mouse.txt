@@ -1,0 +1,72 @@
+# Scenario 0
+https://leak.test/s0/interactive/index.php?policy=no-referrer
+https://leak.test/s0/interactive/index.php?policy=no-referrer-when-downgrade
+https://leak.test/s0/interactive/index.php?policy=origin
+https://leak.test/s0/interactive/index.php?policy=origin-when-cross-origin
+https://leak.test/s0/interactive/index.php?policy=same-origin
+https://leak.test/s0/interactive/index.php?policy=strict-origin
+https://leak.test/s0/interactive/index.php?policy=strict-origin-when-cross-origin
+https://leak.test/s0/interactive/index.php?policy=unsafe-url
+
+# Scenario 1
+https://attacker.test/s1/interactive/index.html?policy=no-referrer
+https://attacker.test/s1/interactive/index.html?policy=no-referrer-when-downgrade
+https://attacker.test/s1/interactive/index.html?policy=origin
+https://attacker.test/s1/interactive/index.html?policy=origin-when-cross-origin
+https://attacker.test/s1/interactive/index.html?policy=same-origin
+https://attacker.test/s1/interactive/index.html?policy=strict-origin
+https://attacker.test/s1/interactive/index.html?policy=strict-origin-when-cross-origin
+https://attacker.test/s1/interactive/index.html?policy=unsafe-url
+
+# Scenario 2
+https://leak.test/s2/interactive/index.html?policy=no-referrer
+https://leak.test/s2/interactive/index.html?policy=no-referrer-when-downgrade
+https://leak.test/s2/interactive/index.html?policy=origin
+https://leak.test/s2/interactive/index.html?policy=origin-when-cross-origin
+https://leak.test/s2/interactive/index.html?policy=same-origin
+https://leak.test/s2/interactive/index.html?policy=strict-origin
+https://leak.test/s2/interactive/index.html?policy=strict-origin-when-cross-origin
+https://leak.test/s2/interactive/index.html?policy=unsafe-url
+
+# Scenario 3
+https://adition.com/s3/interactive/index.html?policy=no-referrer
+https://adition.com/s3/interactive/index.html?policy=no-referrer-when-downgrade
+https://adition.com/s3/interactive/index.html?policy=origin
+https://adition.com/s3/interactive/index.html?policy=origin-when-cross-origin
+https://adition.com/s3/interactive/index.html?policy=same-origin
+https://adition.com/s3/interactive/index.html?policy=strict-origin
+https://adition.com/s3/interactive/index.html?policy=strict-origin-when-cross-origin
+https://adition.com/s3/interactive/index.html?policy=unsafe-url
+
+# Scenario 4
+https://leak.test/s4/interactive/index.html?policy=no-referrer
+https://leak.test/s4/interactive/index.html?policy=no-referrer-when-downgrade
+https://leak.test/s4/interactive/index.html?policy=origin
+https://leak.test/s4/interactive/index.html?policy=origin-when-cross-origin
+https://leak.test/s4/interactive/index.html?policy=same-origin
+https://leak.test/s4/interactive/index.html?policy=strict-origin
+https://leak.test/s4/interactive/index.html?policy=strict-origin-when-cross-origin
+https://leak.test/s4/interactive/index.html?policy=unsafe-url
+
+# Scenario 7
+https://attacker.test/s7/interactive?policy=no-referrer
+https://attacker.test/s7/interactive?policy=no-referrer-when-downgrade
+https://attacker.test/s7/interactive?policy=origin
+https://attacker.test/s7/interactive?policy=origin-when-cross-origin
+https://attacker.test/s7/interactive?policy=same-origin
+https://attacker.test/s7/interactive?policy=strict-origin
+https://attacker.test/s7/interactive?policy=strict-origin-when-cross-origin
+https://attacker.test/s7/interactive?policy=unsafe-url
+
+# Scenario 8
+https://adition.com/s8/interactive/index.html?policy=no-referrer
+https://adition.com/s8/interactive/index.html?policy=no-referrer-when-downgrade
+https://adition.com/s8/interactive/index.html?policy=origin
+https://adition.com/s8/interactive/index.html?policy=origin-when-cross-origin
+https://adition.com/s8/interactive/index.html?policy=same-origin
+https://adition.com/s8/interactive/index.html?policy=strict-origin
+https://adition.com/s8/interactive/index.html?policy=strict-origin-when-cross-origin
+https://adition.com/s8/interactive/index.html?policy=unsafe-url
+
+# USERINTERACTION TAG
+TAG - #a1 - drag_and_drop

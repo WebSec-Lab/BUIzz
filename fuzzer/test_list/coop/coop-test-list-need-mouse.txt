@@ -1,0 +1,12 @@
+# user action mouse corpus
+https://attacker.com/coop/a?coop=unsafe-none
+https://attacker.com/coop/a?coop=same-origin-allow-popups
+https://attacker.com/coop/a?coop=noopener-allow-popups
+https://attacker.com/coop/a?coop=same-origin
+https://victim.com/coop/a?coop=unsafe-none
+https://victim.com/coop/a?coop=same-origin-allow-popups
+https://victim.com/coop/a?coop=noopener-allow-popups
+https://victim.com/coop/a?coop=same-origin
+
+# USERINTERACTION TAG
+TAG - #a1 - drag_and_drop

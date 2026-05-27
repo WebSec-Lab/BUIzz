@@ -1,0 +1,4 @@
+http://10.20.23.182:5021/sandbox/allow-storage-access-by-user-activation?sb=allow-scripts%20allow-forms%20allow-modals%20allow-pointer-lock
+http://10.20.23.182:5021/sandbox/allow-scripts?sb=allow-popups%20allow-same-origin%20allow-forms
+http://10.20.23.182:5021/sandbox/allow-same-origin?sb=allow-scripts%20allow-popups%20allow-forms
+#http://10.20.23.182:5021/sandbox/allow-downloads?sb=allow-scripts

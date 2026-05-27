@@ -1,0 +1,14 @@
+{
+  "browser": "brave",
+  "corpus": "https://attacker.com/render/sep_92?csp=script-src%20%27nonce-123%27%20%27unsafe-eval%27%3Bconnect-src%20https%3A//attacker.com%3B&browser_name=brave&scenario_id=1672_DEPTH1.json&bf=1&corpus=https%3A%2F%2Fattacker.com%2Frender%2Fsep_92%3Fcsp%3Dscript-src%2520%2527nonce-123%2527%2520%2527unsafe-eval%2527%253Bconnect-src%2520https%253A%2F%2Fattacker.com%253B",
+  "useraction": [
+    {
+      "type": "click",
+      "interaction": {
+        "title": "Middle click",
+        "num": "middle"
+      },
+      "tag": "#a1"
+    }
+  ]
+}

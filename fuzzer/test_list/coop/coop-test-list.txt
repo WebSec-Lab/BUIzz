@@ -1,0 +1,8 @@
+https://attacker.com/coop/window?coop=unsafe-none
+https://attacker.com/coop/window?coop=same-origin-allow-popups
+https://attacker.com/coop/window?coop=noopener-allow-popups
+https://attacker.com/coop/window?coop=same-origin
+https://victim.com/coop/window?coop=unsafe-none
+https://victim.com/coop/window?coop=same-origin-allow-popups
+https://victim.com/coop/window?coop=noopener-allow-popups
+https://victim.com/coop/window?coop=same-origin

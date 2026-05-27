@@ -1,0 +1,65 @@
+
+/*# sourceMappingURL=http://adition.com/report/?leak=css-source-map */
+
+@import 'http://adition.com/report/?leak=css-import-string';
+@import url(http://adition.com/report/?leak=css-import-url);
+
+a:after {content: url(http://adition.com/report/?leak=css-after-content)}
+a::after {content: url(http://adition.com/report/?leak=css-after-content-2)}
+a:before {content: url(http://adition.com/report/?leak=css-before-content)}
+a::before {content: url(http://adition.com/report/?leak=css-before-content-2)}
+
+big {
+    list-style: url(http://adition.com/report/?leak=css-list-style);
+    list-style-image: url(http://adition.com/report/?leak=css-list-style-image);
+    background: url(http://adition.com/report/?leak=css-background);
+    background-image: url(http://adition.com/report/?leak=css-background-image);
+    border-image: url(http://adition.com/report/?leak=css-border-image);
+    -moz-border-image: url(http://adition.com/report/?leak=css--moz-background-image-alias);
+    -webkit-border-image: url(http://adition.com/report/?leak=css--webkit-background-image-alias);
+    border-image-source: url(http://adition.com/report/?leak=css-border-image-source);
+    shape-outside: url(http://adition.com/report/?leak=css-shape-outside);
+    cursor: url(http://adition.com/report/?leak=css-cursor), auto;
+}
+
+@font-face {
+    font-family: leak;
+    src: url(http://adition.com/report/?leak=css-font-face-src);
+}
+
+@font-face {
+  font-family: 'leak';
+  src: url('http://adition.com/report/?leak=css-font-face-src-eot') format('eot'), url('http://adition.com/report/?leak=css-font-face-src-woff') format('woff'), url('http://adition.com/report/?leak=css-font-face-src-ttf') format('truetype');
+}
+
+big {
+    font-family: leak;
+}
+
+circle {
+    fill: url(http://adition.com/report/?leak=svg-css-fill#foo);
+    mask: url(http://adition.com/report/?leak=svg-css-mask#foo);
+    -webkit-mask: url(http://adition.com/svg-css--webkit-mask#foo);
+    filter: url(http://adition.com/report/?leak=svg-css-filter#foo);
+    clip-path: url(http://adition.com/report/?leak=svg-css-clip-path#foo);
+}
+
+s {
+  --leak: url(http://adition.com/report/?leak=css-variables);
+}
+s {
+  background: var(--leak);
+}
+s::after {
+  content: attr(foo url);
+}
+s::before {
+  content: attr(notpresent, url(http://adition.com/report/?leak=css-attr-fallback));
+}
+
+p#p1 {
+    background-image: \75 \72 \6C (http://adition.com/report/?leak=css-escape-url-1);
+}
+p#p2 {
+    background-image: \000075\000072\00006C(http://adition.com/report/?leak=css-escape-url-2);
+}

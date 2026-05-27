@@ -1,0 +1,6 @@
+http://10.20.23.182:5021/sandbox/allow-popups-to-escape-sandbox?sb=allow-scripts%20allow-popups
+http://10.20.23.182:5021/sandbox/allow-popups?sb=allow-scripts%20allow-same-origin
+#http://127.0.0.1:5021/sandbox/allow-same-origin?sb=allow-scripts%20allow-popups%20allow-forms
+
+# USERINTERACTION TAG
+TAG - #a1 - drag_and_drop

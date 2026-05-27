@@ -1,0 +1,69 @@
+{
+  "name": "whale",
+  "click": [
+    {
+      "title": "Left click",
+      "num": "left"
+    },
+    {
+      "title": "Middle click",
+      "num": "middle"
+    }
+  ],
+  
+  "mouse": [
+    {
+      "title": "Open link in new tab",
+      "num": "1"
+    },
+    {
+      "title": "Open link in new window",
+      "num": "2"
+    },
+    {
+      "title": "Open link in incognito window",
+      "num": "3"
+    },
+    {
+      "title": "Open link in workspace",
+      "num": "4"
+    }
+  ],
+
+  "keyboard": [
+    {
+      "title": "Reopen closed tab",
+      "num": ["ctrl", "shift", "t"]
+    },
+    {
+      "title": "Duplicate tab",
+      "num": ["ctrl", "k"]
+    },
+    {
+      "title": "Navigate backward",
+      "num": ["alt", "left"]
+    },
+    {
+      "title": "Navigate forward",
+      "num": ["alt", "right"]
+    },
+    {
+      "title": "Refresh page",
+      "num": ["f5"]
+    },
+    {
+      "title": "Force refresh current page",
+      "num": ["ctrl", "f5"]
+    }
+  ],
+  "cve" : [
+    {
+      "title": "drag_and_drop",
+      "num": 1
+    },
+    {
+      "title": "drag_and_drop_to_other_window",
+      "num": 1
+    }
+  ]
+}
