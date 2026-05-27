@@ -22,7 +22,6 @@ example/
 ├── samesite_split/     # Pre-selected scenarios for SameSite split-view bug (bug_20)
 ├── csp_split_blob/     # Pre-selected scenarios for CSP split-view blob: bug (bug_07)
 ├── csp_split_data/     # Pre-selected scenarios for CSP split-view data: bug (bug_06)
-└── fix_scenario/       # Patched scenario variants for comparison
 ```
 
 ---
@@ -222,13 +221,3 @@ The `violation: strict` field means the `SameSite=Strict` cookie was transmitted
 — a behaviour that should be blocked, confirming a SameSite policy bypass.
 
 This bug has been assigned **[CVE-2025-48980](https://www.cve.org/CVERecord?id=CVE-2025-48980)**.
-
----
-
-## Bugs Reproducible on Brave 1.80.120
-
-| Bug | Policy | Interaction | Status |
-|---|---|---|---|
-| 6 | CSP | Split view, `data:` | Fixed in Brave 1.84+ |
-| 7 | CSP | Split view, `blob:` | Fixed in Brave 1.84+ |
-| 20 | SameSite | Split view | Fixed in Brave 1.84+ |
