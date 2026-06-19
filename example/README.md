@@ -17,11 +17,12 @@ pipeline using **Brave** without installing any additional browser.
 
 ```
 example/
-├── setup.py            # Downloads and configures the portable Brave binary
-├── mini_scenario.py    # Deploys pre-selected bug scenarios into fuzzer/scenario/
-├── samesite_split/     # Pre-selected scenarios for SameSite split-view bug (bug_20)
-├── csp_split_blob/     # Pre-selected scenarios for CSP split-view blob: bug (bug_07)
-├── csp_split_data/     # Pre-selected scenarios for CSP split-view data: bug (bug_06)
+├── setup.py                # Downloads Brave + seeds the pre-configured profile
+├── brave-profile-template/ # Pre-configured Brave profile (Shields off, English UI)
+├── mini_scenario.py        # Deploys pre-selected bug scenarios into fuzzer/scenario/
+├── samesite_split/         # Pre-selected scenarios for SameSite split-view bug (bug_20)
+├── csp_split_blob/         # Pre-selected scenarios for CSP split-view blob: bug (bug_07)
+├── csp_split_data/         # Pre-selected scenarios for CSP split-view data: bug (bug_06)
 ```
 
 ---
@@ -52,46 +53,65 @@ python ..\makeDB.py
 python setup.py
 ```
 
-`setup.py` downloads `brave-v1.80.120-win32-x64.zip` (~200 MB) from the
-official Brave GitHub release, extracts it, and updates
-`..\fuzzer\browser_info\browser_info.json` to point at the extracted `brave.exe`.
+`setup.py` does three things:
+
+1. Downloads `brave-v1.80.120-win32-x64.zip` (~200 MB) from the official Brave
+   GitHub release and extracts it.
+2. Seeds a **pre-configured, isolated Brave profile** at `example/brave-profile/`
+   by copying `brave-profile-template/` — Shields already disabled and the UI
+   forced to English. (Skipped if `brave-profile/` already exists, so re-running
+   never wipes your state.)
+3. Writes the launch command into `..\fuzzer\browser_info\browser_info.json`,
+   pinning the extracted `brave.exe`, the dedicated `--user-data-dir`, and
+   `--lang=en-US`.
+
+Because Brave runs from its own `--user-data-dir`, it never collides with any
+system-installed Brave, and **no manual browser configuration is required.**
 
 Docker Desktop must be running before Step 1 below.
 
 ---
 
-## Disable Brave Shields
+## Brave configuration (pre-applied — no action needed)
 
-Brave's built-in Shields interfere with the fuzzer's cross-site requests.
-Go to `brave://settings/shields` and apply the settings shown below:
+Brave's built-in Shields would otherwise interfere with the fuzzer's cross-site
+requests, so they must be turned off. **You don't need to do this manually** —
+the bundled profile in `brave-profile-template/` already has the required
+settings, and `setup.py` copies it into `example/brave-profile/`. The fuzzer then
+launches Brave against that profile.
+
+The pre-applied settings are:
+
+| Setting | Location | Value |
+|---|---|---|
+| Trackers & ads blocking | `brave://settings/shields` | **Disabled** |
+| Upgrade connections to HTTPS | `brave://settings/shields` | **Disabled** (prevents forced HTTPS redirect on local test domains) |
+| Block fingerprinting | `brave://settings/shields` | **Disabled** |
+| Block cookies | `brave://settings/shields` | **Allow all cookies** |
+| Startup behavior | `brave://settings/onStartup` | **Open the New Tab page** |
+| Display language | `brave://settings/languages` | **English (United States)** |
+
+<details>
+<summary>Optional — set these manually instead</summary>
+
+If you prefer to configure Brave yourself, launch the bundled binary with its
+dedicated profile:
+
+```powershell
+.\brave-v1.80.120-win32-x64\brave.exe --user-data-dir=".\brave-profile" --lang=en-US --no-first-run
+```
+
+Then apply the values in the table above under `brave://settings/shields` and
+`brave://settings/onStartup`:
 
 ![Brave Shields settings](shields.png)
-
-| Setting | Value |
-|---|---|
-| Trackers & ads blocking | **Disabled** |
-| Upgrade connections to HTTPS | **Disabled** (prevents forced HTTPS redirect on local test domains) |
-| Block fingerprinting | **Disabled** |
-| Block cookies | **Allow all cookies** |
-
----
-
-## Configure Brave Startup
-
-Go to `brave://settings/onStartup` and set the startup behavior to
-**"Open the New Tab page"** so Brave always starts clean without restoring
-previous sessions.
-
 ![Brave On Startup setting](onStartup.png)
+
+</details>
 
 ---
 
 ## Step 1 — Deploy pre-selected scenarios
-
-The scenarios in this directory were extracted using **window-based slicing** —
-a window of scenarios centred around each confirmed vulnerability-triggering
-scenario was cut from the full fuzzer corpus. This keeps the example small while
-preserving the context needed to reproduce the bug.
 
 Choose which bug to test and run the corresponding command:
 

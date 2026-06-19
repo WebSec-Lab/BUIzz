@@ -30,7 +30,9 @@ $packages = @(
     "psutil",
     "pywinauto",
     "pyautogui",
-    "webdriver-manager"
+    "webdriver-manager",
+    "mysql-connector-python",
+    "pywin32"
 )
 
 foreach ($pkg in $packages) {

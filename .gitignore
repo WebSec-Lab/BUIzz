@@ -30,6 +30,10 @@ profiles/
 example/brave-v*-win32-x64/
 example/*.zip
 
+# Working Brave profile, seeded from brave-profile-template/ by setup.py.
+# (the template itself IS committed — different dir name, not matched here)
+example/brave-profile/
+
 # LaTeX build artifacts (artifact-appendix sources)
 *.aux
 *.fls
