@@ -45,9 +45,10 @@ def _leak_to_tag(leak: str | None, policy: str) -> str:
     return _LEAK_TAG_MAP.get(leak, leak)
 
 
-_SCHEME_INSPECT_POLICIES = {"csp1", "csp2", "pp", "sandbox"}
+_SCHEME_INSPECT_POLICIES = {"csp", "csp1", "csp2", "pp", "sandbox"}
 
 _POLICY_CORPUS_DIR = {
+    "csp":     os.path.join(SERVER_DIR, "csp",     "backend", "templates", "output"),
     "csp1":    os.path.join(SERVER_DIR, "csp",     "backend", "templates", "output"),
     "csp2":    os.path.join(SERVER_DIR, "csp",     "backend", "templates", "output"),
     "pp":      os.path.join(SERVER_DIR, "pp",      "backend", "templates", "output"),
