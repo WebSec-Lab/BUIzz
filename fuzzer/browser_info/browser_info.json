@@ -8,7 +8,7 @@
   },
   {
     "browser_name": "brave",
-    "browser_dir_command": "C:\\Users\\82104\\Desktop\\BUIZZ\\example\\brave-v1.80.120-win32-x64\\brave.exe --no-first-run --no-default-browser-check --remote-debugging-port=9222 --start-maximized --disable-extensions --disable-brave-extension",
+    "browser_dir_command": "\"C:\\Users\\82104\\Desktop\\BUIzz\\example\\brave-v1.80.120-win32-x64\\brave.exe\" --user-data-dir=\"C:\\Users\\82104\\Desktop\\BUIzz\\example\\brave-profile\" --lang=en-US --no-first-run --no-default-browser-check --remote-debugging-port=9222 --start-maximized --disable-extensions",
     "browser_regex": ".*New Tab*",
     "browser_top_ui": 85,
     "cve_drag_and_drop": 5

@@ -169,6 +169,10 @@ def _is_special_scheme(el):
 
 
 def mouse_click(page, tag, interaction="left", modifiers=None):
+    try:
+        page.bring_to_front()
+    except Exception:
+        pass
     frame, el = find_in_frames(page, tag, timeout=3.0)
     if el is None:
         return False
@@ -185,7 +189,7 @@ def mouse_click(page, tag, interaction="left", modifiers=None):
     if no_wait_after:
         print(f"[debug] special scheme on {tag}, using no_wait_after=True")
 
-    base_kwargs = dict(button=interaction, delay=100, timeout=1000)
+    base_kwargs = dict(button=interaction, delay=100, timeout=3000)
     if modifiers is not None:
         base_kwargs["modifiers"] = modifiers
 
