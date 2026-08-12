@@ -234,3 +234,16 @@ See [`schema.sql`](schema.sql) for the full annotated schema, or run `python mak
 | `violation` | Enforcement outcome reported by the server (e.g. `lax`, `1`, empty) |
 | `interaction` | Human-readable label of the simulated interaction; NULL for baseline |
 | `timestamp` | UTC timestamp of record insertion |
+
+## Citation
+You can cite our paper with the following bibtex entry.
+```
+@INPROCEEDINGS{jung:usenixsec:2026,
+  author = {Jung, Mingi and Kim, Donggyu and Kim, Mijung and Wi, Seongil},
+  title = {{BUIzz}: Finding Policy Enforcement Bugs via Interaction Simulation on the Browser User Interface},
+  booktitle = {In Proceedings of the {USENIX} Security Symposium},
+  pages = {4961--4980},
+  year = 2026
+}
+```
+
